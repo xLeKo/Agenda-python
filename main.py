@@ -54,7 +54,7 @@ def listarcontato():
     agenda.close()
     reset()
 
-
+# função deletar contato não está funcionando
 def deletarcontato():
     nomeDeletado = input("Digite o nome para ser deletado: ").lower()
     agenda = open("agenda.txt","r")
