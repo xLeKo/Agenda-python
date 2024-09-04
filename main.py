@@ -12,16 +12,16 @@ def menu():
     
     match opcao:
         case "1":
-            cadastrarcontato()
+            cadastrarContato()
 
         case "2":
-            listarcontato()
+            listarContato()
 
         case "3":
-            deletarcontato()
+            deletarContato()
 
         case "4":
-            buscarcontato()
+            buscarContato()
         
         case "5":
             sair()
@@ -31,7 +31,7 @@ def menu():
             menu()
     
 
-def cadastrarcontato():
+def cadastrarContato():
     id = input("Escolha o ID do seu contato: ")
     nome = input("Digite o nome do seu contato: ")
     telefone = input("Digite o telefone do seu contato: ")
@@ -47,7 +47,7 @@ def cadastrarcontato():
     reset()
 
 
-def listarcontato():
+def listarContato():
     agenda = open("agenda.txt", "r")
     for contato in agenda:
         print(contato)
@@ -55,7 +55,7 @@ def listarcontato():
     reset()
 
 # função deletar contato não está funcionando
-def deletarcontato():
+def deletarContato():
     nomeDeletado = input("Digite o nome para ser deletado: ").lower()
     agenda = open("agenda.txt","r")
     aux = []
@@ -69,11 +69,11 @@ def deletarcontato():
     for i in aux2:
         agenda.write(i)
     print(f"Contato deletado com sucesso!")
-    listarcontato()
+    listarContato()
     reset()
     
 
-def buscarcontato():
+def buscarContato():
     nome = input(f"Digite o nome a ser procurado: ").upper()
     agenda = open("agenda.txt", "r")
     for contato in agenda:
